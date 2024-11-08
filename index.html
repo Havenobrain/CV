@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Georgiy Sergeev - Junior Full Stack Developer</title>
+    <!-- Подключение локальных шрифтов -->
+    <style>
+        @font-face {
+            font-family: 'RedditSans';
+            src: url('fonts/RedditSans-VariableFont_wght.ttf') format('truetype');
+            font-weight: 300 700;
+        }
+        @font-face {
+            font-family: 'RedditSans Italic';
+            src: url('fonts/RedditSans-Italic-VariableFont_wght.ttf') format('truetype');
+            font-weight: 300 700;
+            font-style: italic;
+        }
+    </style>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="profile-info">
+            <h1>Georgiy Sergeev</h1>
+            <h2>Junior Full Stack Developer</h2>
+            <p class="skills">Python, JavaScript, React, Django, Node.js</p>
+            <p><strong>Email:</strong> geoserggio1995@gmail.com</p>
+            <p><strong>Phone:</strong> +995 599 451 434</p>
+            <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/georgiy-sergeev" target="_blank">linkedin.com/in/georgiy-sergeev</a></p>
+            <p><strong>Telegram:</strong> @georgij_sir</p>
+        </div>
+        <img src="me.jpg" alt="Profile Photo" class="profile-photo">
+    </div>
+
+    <div class="accordion">
+        <div class="accordion-item">
+            <button class="accordion-button">Objective</button>
+            <div class="accordion-content">
+                <p>Seeking a position as a Full-stack Python Developer where I can apply my knowledge in server-side development, particularly using Python, Django, and Flask, to create scalable and efficient web applications.</p>
+                <p>Aiming to secure a role as a JavaScript Developer (Frontend) where I can utilize my skills in React, Node.js, and modern JavaScript frameworks to develop dynamic and user-friendly interfaces.</p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <button class="accordion-button">Summary</button>
+            <div class="accordion-content">
+                <p>A driven Junior Full Stack Developer with solid proficiency in Python and JavaScript. Adept at building and maintaining web applications on both the backend and frontend. Proven track record in enhancing efficiency and boosting application performance. Experienced in cross-team collaboration, integrating third-party services, and crafting dynamic user interfaces with cutting-edge frontend technologies.</p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <button class="accordion-button">Technical Skills</button>
+            <div class="accordion-content">
+                <ul>
+                    <li><strong>Programming Languages:</strong> Python, JavaScript (ES6+), TypeScript</li>
+                    <li><strong>Web Frameworks:</strong> Django, Django REST Framework, React</li>
+                    <li><strong>State Management:</strong> Redux</li>
+                    <li><strong>Real-time Communication:</strong> WebSocket, Redis</li>
+                    <li><strong>Telegram Bot Development:</strong> Aiogram, Telethon, python-telegram-bot</li>
+                    <li><strong>HTTP Libraries:</strong> Axios</li>
+                    <li><strong>Web Technologies:</strong> HTML, CSS, JSX, Bootstrap, RESTful APIs</li>
+                    <li><strong>API Documentation:</strong> OpenAPI (Swagger)</li>
+                    <li><strong>Package Management:</strong> npm, Yarn</li>
+                    <li><strong>Module Bundlers:</strong> Webpack</li>
+                    <li><strong>Databases:</strong> MySQL, PostgreSQL</li>
+                    <li><strong>Version Control:</strong> Git</li>
+                    <li><strong>Tools:</strong> Docker, CI/CD</li>
+                    <li><strong>Cloud Services:</strong> AWS</li>
+                </ul>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <button class="accordion-button">Education</button>
+            <div class="accordion-content">
+                <ul>
+                    <li>
+                        <strong>Master of Engineering in Horizontal Drilling</strong><br>
+                        Saint-Petersburg Mining University (2020 - 2022)<br>
+                        GPA: 5.00/5.00
+                    </li>
+                    <li>
+                        <strong>Bachelor of Engineering in Drilling of Oil and Gas Wells</strong><br>
+                        Saint-Petersburg Mining University (2016 - 2020)<br>
+                        GPA: 4.75/5.00
+                    </li>
+                    <li>
+                        <strong>Python Full Stack Web Development Course</strong><br>
+                        SkillFactory, 2022 - 2024
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <button class="accordion-button">Work Experience</button>
+            <div class="accordion-content">
+                <ul>
+                    <li>
+                        <strong>English Tutor</strong><br>
+                        September 2021 – Present<br>
+                        Provided tutoring services with a focus on effective communication skills and subject mastery.
+                    </li>
+                    <li>
+                        <strong>Educational Course Developer, Gazprom Neft and Shell</strong><br>
+                        March 2021 – June 2022<br>
+                        Developed educational courses for drilling crews, focusing on visual communication and instructional design. Improved training materials, resulting in a 15% improvement in knowledge retention.
+                    </li>
+                    <li>
+                        <strong>Roughneck, NSH “Asia Drilling”</strong><br>
+                        July 2018 – August 2019<br>
+                        Gained hands-on experience in drilling operations. Collaborated effectively with teams to successfully complete drilling projects under tight deadlines.
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <button class="accordion-button">Languages</button>
+            <div class="accordion-content">
+                <ul>
+                    <li>Russian (Native)</li>
+                    <li>English (Advanced - C1)</li>
+                </ul>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <button class="accordion-button">Projects</button>
+            <div class="accordion-content projects-content">
+                <div class="projects-content">
+                    <ul>
+                        <li>
+                            <button class="project-title" onclick="toggleProjectDescription('project1')"><strong>Project SCAN</strong></button>
+                            <div id="project1" class="project-description">
+                                <p>Developed a client-side application for a publication search service using React and Django Rest Framework. The project includes features like user authentication, search functionality with advanced filtering options, and responsive design. Integrated with a custom API for retrieving publication data and employed React components for a modular and maintainable UI.</p>
+                                <a href="https://github.com/Havenobrain/Final-repository-for-SCAN" target="_blank">GitHub Link</a>
+                            </div>
+                        </li>
+                        <li>
+                            <button class="project-title" onclick="toggleProjectDescription('project2')"><strong>Project SILANT</strong></button>
+                            <div id="project2" class="project-description">
+                                <p>Developed a service for monitoring and managing the maintenance of heavy machinery for the Cheboksary Plant of Power Units. The application includes user role-based access control, data tables with advanced filtering and sorting, and an admin-managed login system. Implemented with a responsive, cross-browser interface following the brand's style guide.</p>
+                                <a href="https://github.com/Havenobrain/Final_mission" target="_blank">GitHub Link</a>
+                            </div>
+                        </li>
+                        <li>
+                            <button class="project-title" onclick="toggleProjectDescription('project3')"><strong>Project EnviroStack</strong></button>
+                            <div id="project3" class="project-description">
+                                <p>Developed and deployed a Docker image containing a full-stack web server environment with Django, Nginx, Postgres, and Gunicorn. The image is publicly available on Docker Hub and includes a pre-configured admin panel with preset credentials. The solution was designed to streamline the setup process for junior web developers while ensuring an accurate assessment of their skills.</p>
+                                <a href="https://hub.docker.com/repository/docker/geoserggio/my_fullstack_app/general" target="_blank">Docker Hub Link</a>
+                            </div>
+                        </li>
+                        <li>
+                            <button class="project-title" onclick="toggleProjectDescription('project4')"><strong>Project GameHub</strong></button>
+                            <div id="project4" class="project-description">
+                                <p>Developed a fan-server website for a popular MMORPG, implementing features like user registration with email verification, ad creation/editing, and category-based management. The project utilized Django, Django REST Framework, and Aiohttp for efficient server-side processing, with JavaScript managing dynamic front-end interactions.</p>
+                                <a href="https://github.com/Havenobrain/OOO" target="_blank">GitHub Link</a>
+                            </div>
+                        </li>
+                        <li>
+                            <button class="project-title" onclick="toggleProjectDescription('project5')"><strong>Project Messenger</strong></button>
+                            <div id="project5" class="project-description">
+                                <p>Developed a basic messaging application with JavaScript client and Django Rest Framework backend. Features include message sending/receiving via WebSockets, group chat management through REST API, user profile editing (name, avatar), and viewing other users with direct messaging capability.</p>
+                                <a href="https://github.com/Havenobrain/chat-websockets" target="_blank">GitHub Link</a>
+                            </div>
+                        </li>
+                        <li>
+                            <button class="project-title" onclick="toggleProjectDescription('project6')"><strong>Project Recipes</strong></button>
+                            <div id="project6" class="project-description">
+                                <p>Created a full-stack recipe application using Django Rest Framework with OpenAPI+Swagger for auto-documentation and React Router for client-side navigation. The app categorizes recipes and allows users to browse categories and individual recipe pages, with a structured API available for integration.</p>
+                                <a href="https://github.com/Havenobrain/Recipes" target="_blank">GitHub Link</a>
+                            </div>
+                        </li>
+                        <li>
+                            <button class="project-title" onclick="toggleProjectDescription('project7')"><strong>Project Monitoring Bot</strong></button>
+                            <div id="project7" class="project-description">
+                                <p>Developed a Telegram bot that monitors subscribed channels for messages containing specific trigger words and forwards them, including photos, to a designated channel. The bot operates autonomously and efficiently manages content filtering and forwarding in real-time.</p>
+                                <a href="https://github.com/Havenobrain/BBBOT" target="_blank">GitHub Link</a>
+                            </div>
+                        </li>
+                        <li>
+                            <button class="project-title" onclick="toggleProjectDescription('project8')"><strong>Telegram Currency Bot</strong></button>
+                            <div id="project8" class="project-description">
+                                <p>Developed a Python bot that converts currencies and provides exchange rate information (using pytelegrambotapi, Requests, JSON). Implemented custom exceptions for error handling and added commands for user convenience.</p>
+                                <a href="https://github.com/Havenobrain/telebot" target="_blank">GitHub Link</a>
+                            </div>
+                        </li>
+                        <li>
+                            <button class="project-title" onclick="toggleProjectDescription('project9')"><strong>Project Blog</strong></button>
+                            <div id="project9" class="project-description">
+                                <p>Developed a responsive and accessible blog website based on a provided design template. The project involved creating semantic HTML structure with header, main, and footer sections, styling with CSS, and implementing a grid layout for the main content. Focused on using BEM methodology and Figma for design integration.</p>
+                                <a href="https://github.com/Havenobrain/blog-project" target="_blank">GitHub Link</a>
+                            </div>
+                        </li>                    
+                        <li>
+                            <button class="project-title" onclick="toggleProjectDescription('project10')"><strong>Project Slider</strong></button>
+                            <div id="project10" class="project-description">
+                                <p>Developed an image slider for a website based on a provided design template. The slider includes features like circular navigation with arrows, dot indicators for direct slide access, and clickable links for selecting specific slides. The project is designed as an autonomous module for easy integration into existing websites.</p>
+                                <a href="https://github.com/Havenobrain/slider-project" target="_blank">GitHub Link</a>
+                            </div>
+                        </li>
+                        <li>
+                            <button class="project-title" onclick="toggleProjectDescription('project11')"><strong>Project Book Shop</strong></button>
+                            <div id="project11" class="project-description">
+                                <p>Developed a single-page application for an online bookstore using JavaScript (ES6), Webpack, and the Google Books API. The project includes features like a dynamic image slider, category-based book search with lazy loading, and an interactive shopping cart. The application is fully responsive, incorporates BEM methodology for CSS structure, and utilizes localStorage to persist cart data. </p>
+                                <a href="https://github.com/Havenobrain/Bookshop" target="_blank">GitHub Link</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

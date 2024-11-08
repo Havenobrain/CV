@@ -1,0 +1,230 @@
+html, body {
+    height: 100%;
+    overflow-y: auto;
+    margin: 0;
+    padding: 0;
+}
+
+/* Подключение шрифта RedditSans */
+@font-face {
+    font-family: 'RedditSans';
+    src: url('./fonts/RedditSans-VariableFont_wght.ttf') format('truetype');
+    font-weight: 300 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RedditSans';
+    src: url('./fonts/RedditSans-Italic-VariableFont_wght.ttf') format('truetype');
+    font-weight: 300 700;
+    font-style: italic;
+}
+
+/* Установка основного шрифта */
+* {
+    font-family: 'RedditSans', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Основной стиль контейнера */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px 40px;
+    border-radius: 15px;
+    background-color: #f9f9f9;
+    position: relative;
+    max-width: 800px;
+    margin: 40px auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Информация о профиле */
+.profile-info {
+    flex: 1;
+    margin-right: 20px;
+}
+
+h1 {
+    font-size: 2.2em;
+    font-weight: 700;
+    color: #4C3DB2;
+    margin: 0;
+}
+
+h2 {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #8DC63F;
+    margin: 5px 0 10px;
+}
+
+.skills {
+    font-weight: 300;
+    color: #333;
+    font-size: 1em;
+    margin: 5px 0 20px;
+}
+
+.profile-info p {
+    color: #333;
+    font-weight: 400;
+    margin: 5px 0;
+}
+
+.profile-info p strong {
+    font-weight: 600;
+}
+
+/* Фото профиля */
+.profile-photo {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 20px;
+    right: 40px;
+}
+
+/* Аккордеон */
+.accordion {
+    max-width: 800px;
+    margin: 20px auto;
+    border-radius: 15px;
+    overflow: visible; /* Изменено на visible для расширения */
+}
+
+.accordion-item {
+    border-top: 1px solid #ddd;
+}
+
+.accordion-button {
+    width: 100%;
+    background-color: #4C3DB2;
+    color: #fff;
+    font-size: 1.1em;
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    outline: none;
+    font-weight: 600;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    border-radius: 10px; /* Закругленные углы */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15); /* Тень для объема */
+    margin-bottom: 10px; /* Отступ между строками */
+}
+
+.accordion-button:hover {
+    background-color: #3a2e91;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Более глубокая тень при наведении */
+}
+
+.accordion-content {
+    background-color: #f9f9f9;
+    padding: 0 15px;
+    max-height: 0;
+    overflow: hidden;
+    border-radius: 10px; /* Закругленные углы */
+    transition: max-height 0.4s ease, padding 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Тень для объемного эффекта */
+}
+
+/* Класс для открытого состояния */
+.accordion-content.open {
+    max-height: 400px; /* Ограничение для Projects */
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.accordion-content p,
+.accordion-content ul {
+    margin: 0 0 10px; /* Добавляет отступ между абзацами */
+    font-weight: 400;
+    color: #333;
+    line-height: 1.6; /* Улучшает читаемость */
+}
+
+.accordion-content a {
+    color: #4C3DB2;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.accordion-content a:hover {
+    text-decoration: underline;
+}
+
+/* Стиль для названия проектов */
+.project-title {
+    display: block; /* Чтобы каждая строка была на отдельной линии */
+    width: 100%; /* Полная ширина */
+    background-color: #beeb7e; /* Салатовый фон */
+    color: #4C3DB2; /* Фиолетовый текст */
+    font-weight: 600;
+    font-size: 1.0em; /* Увеличение текста */
+    padding: 10px; /* Отступы внутри строки */
+    margin: 5px 0; /* Отступы между строками */
+    cursor: pointer; /* Указатель при наведении */
+    text-align: left; /* Выравнивание текста по левому краю */
+    border-radius: 5px; /* Скругление углов */
+    transition: background-color 0.3s; /* Плавное изменение цвета */
+}
+
+.project-title:hover {
+    background-color: #76b537; /* Темнее салатовый при наведении */
+}
+
+.project-description {
+    max-height: 0; /* Изначально скрыто за счет нулевой высоты */
+    overflow: hidden; /* Скрываем выходящий текст */
+    transition: max-height 0.4s ease, padding 0.4s ease, opacity 0.4s ease; /* Плавный переход для раскрытия */
+    padding-left: 20px; /* Отступ слева для описания */
+    margin: 5px 0; /* Отступ между строками */
+    color: #333; /* Цвет текста описания */
+    opacity: 0; /* Изначально невидимо */
+}
+
+.project-description.open {
+    max-height: 500px; /* Достаточно большое значение, чтобы охватить текст */
+    opacity: 1; /* Полная видимость */
+    padding-top: 10px; /* Отступы, чтобы текст не выглядел слишком прижатым */
+    padding-bottom: 10px;
+}
+
+.project-description p {
+    margin: 0;
+    font-weight: 400;
+}
+
+.project-description a {
+    color: #4C3DB2;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.project-description a:hover {
+    text-decoration: underline;
+}
+
+
+.projects-content {
+    overflow-y: auto;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+
+body {
+    background-image: 
+        linear-gradient(rgba(75, 0, 130, 0.5), rgba(75, 0, 130, 0.5)), /* Средняя прозрачность фиолетового градиента */
+        url('background.jpg'); /* Основное изображение фона */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
